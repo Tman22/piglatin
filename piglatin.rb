@@ -1,7 +1,7 @@
 class Piglatin
 
   def self.call(string)
-    string.split.map do |word|
+    string.downcase.split.map do |word|
       if word.start_with?("a","e","i","o","u")
         word.chars.rotate!.join
       elsif word.match(/\b([bcdfghjklmnprstvwxyz]|qu)+/)
